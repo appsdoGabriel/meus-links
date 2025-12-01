@@ -5,71 +5,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meus Links</title>
 
+    <!-- Ícones do Font Awesome -->
+    <script src="https://kit.fontawesome.com/a2e860f07c.js" crossorigin="anonymous"></script>
+
     <style>
         body {
             margin: 0;
             padding: 0;
-            background-color: #007BFF; /* Azul */
+            background-color: #007BFF;
             font-family: Arial, sans-serif;
+            height: 100vh;
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: space-between; /* empurra conteúdo para cima e ícones para baixo */
             align-items: center;
-            height: 100vh;
             color: white;
         }
 
+        /* Relógio */
         #clock {
             font-size: 3rem;
             font-weight: bold;
+            margin-top: 40px;
+        }
+
+        /* Container dos botões */
+        .icon-container {
+            display: flex;
+            gap: 20px;
             margin-bottom: 40px;
         }
 
-        .btn {
-            display: block;
-            width: 220px;
-            padding: 15px;
-            margin: 10px;
-            font-size: 1.2rem;
-            color: white;
-            text-align: center;
+        /* Botões redondos */
+        .icon-btn {
+            width: 65px;
+            height: 65px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            color: #007BFF;
             text-decoration: none;
-            background-color: #000000aa;
-            border-radius: 10px;
             transition: 0.3s;
         }
 
-        .btn:hover {
-            background-color: #ffffff55;
-            transform: scale(1.05);
+        .icon-btn:hover {
+            transform: scale(1.15);
+            background: #e6e6e6;
         }
     </style>
 </head>
 <body>
 
+    <!-- Relógio -->
     <div id="clock">00:00:00</div>
 
-    <a class="btn" href="https://instagram.com/" target="_blank">Instagram</a>
-    <a class="btn" href="https://tiktok.com/" target="_blank">TikTok</a>
-    <a class="btn" href="https://spotify.com/" target="_blank">Spotify</a>
-    <a class="btn" href="https://wa.me/seu_numero" target="_blank">WhatsApp</a>
-    <a class="btn" href="https://youtube.com/" target="_blank">YouTube</a>
+    <!-- Ícones no rodapé -->
+    <div class
 
-<script>
-    function updateClock() {
-        const now = new Date();
-        let h = String(now.getHours()).padStart(2, '0');
-        let m = String(now.getMinutes()).padStart(2, '0');
-        let s = String(now.getSeconds()).padStart(2, '0');
-
-        document.getElementById('clock').innerText = `${h}:${m}:${s}`;
-    }
-
-    setInterval(updateClock, 1000);
-    updateClock();
-</script>
-
-</body>
-</html>
 
 
