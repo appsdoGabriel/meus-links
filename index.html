@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meus Links</title>
 
-    <!-- Ícones do Font Awesome -->
-    <script src="https://kit.fontawesome.com/a2e860f07c.js" crossorigin="anonymous"></script>
+    <!-- Font Awesome oficial (GARANTE que os ícones aparecem) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <style>
         body {
@@ -17,7 +17,7 @@
             height: 100vh;
             display: flex;
             flex-direction: column;
-            justify-content: space-between; /* empurra conteúdo para cima e ícones para baixo */
+            justify-content: space-between; 
             align-items: center;
             color: white;
         }
@@ -29,7 +29,7 @@
             margin-top: 40px;
         }
 
-        /* Container dos botões */
+        /* Container dos ícones */
         .icon-container {
             display: flex;
             gap: 20px;
@@ -62,8 +62,36 @@
     <!-- Relógio -->
     <div id="clock">00:00:00</div>
 
-    <!-- Ícones no rodapé -->
-    <div class
+    <!-- Ícones -->
+    <div class="icon-container">
+
+        <a class="icon-btn" href="https://instagram.com/" target="_blank">
+            <i class="fa-brands fa-instagram"></i>
+        </a>
+
+        <a class="icon-btn" href="https://tiktok.com/" target="_blank">
+            <i class="fa-brands fa-tiktok"></i>
+        </a>
+
+        <a class="icon-btn" href="https://spotify.com/" target="_blank">
+            <i class="fa-brands fa-spotify"></i>
+        </a>
+
+        <a class="icon-btn" href="https://wa.me/seu_numero" target="_blank">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+
+        <a class="icon-btn" href="https://youtube.com/" target="_blank">
+            <i class="fa-brands fa-youtube"></i>
+        </a>
+    </div>
+
+    <script>
+        function updateClock() {
+            const now = new Date();
+            const h = now.getHours().toString().padStart(2, '0');
+            const m = now.getMinutes().toString().padStart(2, '0');
+            const s = now.getSec
 
 
 
