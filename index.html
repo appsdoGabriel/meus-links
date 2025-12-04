@@ -5,14 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meus Links</title>
 
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <style>
         body {
             margin: 0;
             padding: 0;
-            background-color: #007BFF;
             font-family: Arial, sans-serif;
             height: 100vh;
             display: flex;
@@ -20,6 +18,30 @@
             justify-content: space-between;
             align-items: center;
             color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Vídeo de fundo */
+        #bg-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -2;
+        }
+
+        /* Sombra escura para melhorar contraste */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.55);
+            z-index: -1;
         }
 
         /* Relógio */
@@ -27,9 +49,10 @@
             font-size: 3rem;
             font-weight: bold;
             margin-top: 40px;
-            color: white; /* garante que aparece */
+            text-shadow: 2px 2px 8px black;
         }
 
+        /* Ícones */
         .icon-container {
             display: flex;
             gap: 20px;
@@ -58,11 +81,20 @@
 </head>
 <body>
 
+    <!-- Vídeo de fundo -->
+    <video id="bg-video" autoplay loop muted>
+        <source src="https://pin.it/4kXjFUtdU" type="video/mp4">
+    </video>
+
+    <!-- Camada escura -->
+    <div class="overlay"></div>
+
     <!-- Relógio -->
     <div id="clock">00:00:00</div>
 
     <!-- Ícones -->
     <div class="icon-container">
+
         <a class="icon-btn" href="https://instagram.com/" target="_blank">
             <i class="fa-brands fa-instagram"></i>
         </a>
@@ -90,12 +122,10 @@
             const h = now.getHours().toString().padStart(2, '0');
             const m = now.getMinutes().toString().padStart(2, '0');
             const s = now.getSeconds().toString().padStart(2, '0');
-
             document.getElementById("clock").textContent = `${h}:${m}:${s}`;
         }
-
-        updateClock();
         setInterval(updateClock, 1000);
+        updateClock();
     </script>
 
 </body>
