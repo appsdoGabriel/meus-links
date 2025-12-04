@@ -13,14 +13,16 @@
             font-family: Arial, sans-serif;
         }
         
-        /* Vídeo de fundo */
-        .bg-video {
+        /* Imagem de fundo */
+        .bg-image {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            background-image: url('https://www.mensageirodanovaalianca.com.br/_files/ugd/3d89cd_44bf98b6eb93435e9e6a8322d8ef6e7e~mv2.jpg');
+            background-size: cover;
+            background-position: center;
             z-index: -1;
             filter: brightness(60%);
         }
@@ -46,9 +48,8 @@
 <body>
 
     <!-- Vídeo vindo do Pinterest como background -->
-    <video class="bg-video" autoplay loop muted>
-        <source src="PinDown.io_@CFCMayor_1764809277.mp4" type="video/mp4">
-    </video>
+    <!-- Imagem de fundo -->
+    <div class="bg-image"></div>
 
     <div class="content">
         <h1>Bem-vindo ao Meu Site</h1>
